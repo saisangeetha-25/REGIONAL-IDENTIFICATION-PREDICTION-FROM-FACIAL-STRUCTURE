@@ -26,8 +26,6 @@ The trained model currently contains **7 classes**:
 6. Nigeriaa
 7. South_Africa
 
-> **Note:** These class names are reproduced from the project's `data.yaml` configuration.
-
 ---
 
 ## 🚀 Key Features
@@ -255,7 +253,6 @@ Database: deepethno
 
 The application uses database tables for user information and uploaded image information.
 
-> Before deploying the application publicly, database credentials should be moved to environment variables rather than being stored directly in source code.
 
 ---
 
@@ -330,35 +327,7 @@ Model: YOLOv8 Nano initialization when a trained model is unavailable
 
 ---
 
-## 📸 Screenshots
 
-Add screenshots of the following pages to showcase the project:
-
-### Home Page
-
-```text
-Add screenshot here
-```
-
-### User Registration/Login
-
-```text
-Add screenshot here
-```
-
-### Image Upload
-
-```text
-Add screenshot here
-```
-
-### Prediction Result
-
-```text
-Add screenshot here
-```
-
----
 
 ## 🔮 Future Improvements
 
