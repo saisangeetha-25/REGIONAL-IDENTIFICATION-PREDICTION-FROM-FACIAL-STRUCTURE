@@ -1,0 +1,12 @@
+# Requirements for DeepEthno Project
+# Python Version: 3.7.0
+
+django==2.1.7
+PyMySQL==0.9.3
+opencv-python==4.13.0.92
+ultralytics==8.0.145
+matplotlib==3.5.3
+numpy==1.21.6
+Pillow==9.5.0
+torch==1.13.1
+torchvision==0.14.1

@@ -1,0 +1,100 @@
+EXCEPTION
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\deepethno\regional_identification_app\views.py", line 79, in build_model
+    model.train(data='data.yaml', epochs=50,
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\engine\model.py", line 800, in train
+    self.trainer.train()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\engine\trainer.py", line 235, in train
+    self._do_train()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\engine\trainer.py", line 423, in _do_train
+    loss, self.loss_items = self.model(batch)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\nn\modules\module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\nn\modules\module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\nn\tasks.py", line 138, in forward
+    return self.loss(x, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\nn\tasks.py", line 338, in loss
+    preds = self.forward(batch["img"])
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\nn\tasks.py", line 139, in forward
+    return self.predict(x, *args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\nn\tasks.py", line 157, in predict
+    return self._predict_once(x, profile, visualize, embed)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\nn\tasks.py", line 180, in _predict_once
+    x = m(x)  # run
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\nn\modules\module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\nn\modules\module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\nn\modules\block.py", line 318, in forward
+    y.extend(m(y[-1]) for m in self.m)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\nn\modules\block.py", line 318, in <genexpr>
+    y.extend(m(y[-1]) for m in self.m)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\nn\modules\module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\nn\modules\module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\nn\modules\block.py", line 495, in forward
+    return x + self.cv2(self.cv1(x)) if self.add else self.cv2(self.cv1(x))
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\nn\modules\module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\nn\modules\module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\nn\modules\conv.py", line 81, in forward
+    return self.act(self.bn(self.conv(x)))
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\nn\modules\module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\nn\modules\module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\nn\modules\conv.py", line 548, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\nn\modules\conv.py", line 543, in _conv_forward
+    return F.conv2d(
+RuntimeError: [enforce fail at alloc_cpu.cpp:121] data. DefaultCPUAllocator: not enough memory: you tried to allocate 663552 bytes.
+EXCEPTION
+Traceback (most recent call last):
+  File "C:\Users\Kishan\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\engine\trainer.py", line 638, in get_dataset
+    data = check_det_dataset(self.args.data)
+  File "C:\Users\Kishan\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\data\utils.py", line 467, in check_det_dataset
+    raise FileNotFoundError(m)
+FileNotFoundError: Dataset 'data.yaml' images not found, missing path 'D:\NEW DEVELOPMENT\deepethno\..valid\images'
+Note dataset download directory is 'C:\Users\Kishan\Desktop\Traffic Violation\datasets'. You can update this in 'C:\Users\Kishan\AppData\Roaming\Ultralytics\settings.json'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\NEW DEVELOPMENT\deepethno\regional_identification_app\views.py", line 79, in build_model
+    model.train(data='data.yaml', epochs=50,
+  File "C:\Users\Kishan\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\engine\model.py", line 795, in train
+    self.trainer = (trainer or self._smart_load("trainer"))(overrides=args, _callbacks=self.callbacks)
+  File "C:\Users\Kishan\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\models\yolo\detect\train.py", line 65, in __init__
+    super().__init__(cfg, overrides, _callbacks)
+  File "C:\Users\Kishan\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\engine\trainer.py", line 158, in __init__
+    self.data = self.get_dataset()
+EXCEPTION
+Traceback (most recent call last):
+  File "D:\NEW DEVELOPMENT\deepethno\regional_identification_app\views.py", line 86, in build_model
+    return render("admin/admin_home.html", context)
+  File "C:\Users\Kishan\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Kishan\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Kishan\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\Kishan\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\Kishan\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\Kishan\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\Kishan\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loaders\base.py", line 18, in get_template
+    for origin in self.get_template_sources(template_name):
+  File "C:\Users\Kishan\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loaders\filesystem.py", line 36, in get_template_sources
+    name = safe_join(template_dir, template_name)
+  File "C:\Users\Kishan\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\_os.py", line 32, in safe_join
+    final_path = abspath(join(base, *paths))
+  File "C:\Users\Kishan\AppData\Local\Programs\Python\Python310\lib\ntpath.py", line 117, in join
+    genericpath._check_arg_types('join', path, *paths)
+  File "C:\Users\Kishan\AppData\Local\Programs\Python\Python310\lib\genericpath.py", line 152, in _check_arg_types
+    raise TypeError(f'{funcname}() argument must be str, bytes, or '
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'dict'

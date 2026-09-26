@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 7
+names: ['Bhutan', 'Brazil', 'Dubai', 'India', 'Korean', 'Nigeriaa', 'South_Africa']
+
+roboflow:
+  workspace: object-detection-tw3xg
+  project: my-first-project-fnpbo
+  version: 2
+  license: Private
+  url: https://app.roboflow.com/object-detection-tw3xg/my-first-project-fnpbo/2
